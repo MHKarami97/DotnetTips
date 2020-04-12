@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-12">
+    <nb-card style="height: auto;">
+      <nb-tabset fullWidth>
+        <nb-tab tabTitle="مطلب">
+          <div *ngIf="item && item.Body">
+            <div [innerHTML]="item.Body" class="my-post"></div>
+          </div>
+        </nb-tab>
+        <nb-tab tabTitle="نظرات">
+          <div *ngIf="item && item.Comments">
+            <div *ngFor="let com of item.Comments">
+              <div>{{com.Body}}</div>
+            </div>
+          </div>
+        </nb-tab>
+        <nb-tab tabTitle="تگ ها">
+          <div *ngIf="item && item.Tags">
+            <div *ngFor="let tag of item.Tags">
+              <div>{{tag.Name}}</div>
+            </div>
+          </div>
+        </nb-tab>
+      </nb-tabset>
+    </nb-card>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="lists row">
+  <div class="col-md-12 col-lg-12 col-xxxl-12">
+    <nb-card class="list-card" size="small">
+      <nb-card-header>مطالب</nb-card-header>
+      <nb-card-body>
+        <nb-list>
+          <nb-list-item *ngFor="let item of lists">
+            <nb-user [name]="item.Id" [title]="item.Title" (click)="onClick(item.Id)">
+            </nb-user>
+          </nb-list-item>
+        </nb-list>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
