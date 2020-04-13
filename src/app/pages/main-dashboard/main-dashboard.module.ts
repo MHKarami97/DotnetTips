@@ -21,7 +21,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ThemeModule } from '../../@theme/theme.module';
 import { MainDashboardComponent } from './main-dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Tab1Component, TabsComponent, Tab2Component } from './tabs/tabs.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 @NgModule({
   imports: [
@@ -48,8 +48,6 @@ import { Tab1Component, TabsComponent, Tab2Component } from './tabs/tabs.compone
   declarations: [
     MainDashboardComponent,
     TabsComponent,
-    Tab1Component,
-    Tab2Component,
     ListComponent,
   ],
   providers: [

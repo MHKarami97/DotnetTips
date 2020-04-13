@@ -1,31 +1,22 @@
-import { Observable, throwError, Subject } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
-import { catchError, tap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { ResultData } from '../models/post/array-of-post.module';
+import { Setting } from '../setting';
+import { PostService } from './post.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class PostService {
+export class LoadService {
 
-  apiUrl = '/assets/dot-net-tips-database.json';
-  error = new Subject<string>();
+  constructor(private dataService: PostService) { }
 
-  constructor(private http: HttpClient) { }
-
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      this.error.next(error.message);
-      return throwError(error);
-    };
-  }
-
-  get(): Observable<ResultData> {
-    return this.http.get<ResultData>(this.apiUrl)
-      .pipe(
-        tap(),
-        catchError(this.handleError('get', null),
-        ));
+  loadData() {
+    this.dataService.get().subscribe(
+      results => {
+        Setting.dataList = results.ArrayOfPost.Post.sort((a, b) => parseInt(b.Id, 9) - parseInt(a.Id, 9));
+      },
+      error => {
+        Setting.dataList = [];
+      },
+    );
   }
 }

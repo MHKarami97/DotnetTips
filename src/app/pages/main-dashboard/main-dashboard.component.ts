@@ -3,6 +3,7 @@ import { NbToastrService, NbGlobalPhysicalPosition } from '@nebular/theme';
 import { PostService } from '../../services/post.service';
 import { PostData } from '../../models/post/post.module';
 import { Setting } from '../../setting';
+import { LoadService } from '../../services/load.service';
 
 @Component({
   selector: 'ngx-dashboard',
