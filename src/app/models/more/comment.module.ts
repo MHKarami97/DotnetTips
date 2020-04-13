@@ -1,4 +1,4 @@
-import { User } from '../../@core/data/users';
+import { User } from '../user/user.module';
 
 export interface UComment {
   Id: string;
