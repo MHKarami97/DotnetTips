@@ -10,8 +10,8 @@
         <nb-tab tabTitle="نظرات">
           <div *ngIf="item && item.Comments?.Comment">
             <div *ngFor="let com of item.Comments.Comment">
-              <nb-card accent="control" status="success">
-                <nb-card-header>{{com.User?.FriendlyName}} ( {{com.CreatedOn}} )</nb-card-header>
+              <nb-card accent="success" status="success">
+                <nb-card-header>{{com.User?.FriendlyName}} ({{com.CreatedOn | date: 'MM/dd/yyyy'}})</nb-card-header>
                 <nb-card-body>
                   <span [innerHTML]="com.Body"></span>
                 </nb-card-body>
