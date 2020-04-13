@@ -9,7 +9,7 @@ import { ResultData } from '../models/post/array-of-post.module';
 })
 export class PostService {
 
-  apiUrl = '/assets/dot-net-tips-database.json';
+  apiUrl = '/DotnetTips/assets/dot-net-tips-database.json';
   error = new Subject<string>();
 
   constructor(private http: HttpClient) { }
