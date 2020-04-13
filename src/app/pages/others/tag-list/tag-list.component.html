@@ -5,7 +5,7 @@
       <nb-card-body>
         <nb-list>
           <nb-list-item *ngFor="let item of lists">
-            <nb-user [name]="item.Name" [title]="item.Id" onclick="onClick(item.Id)" class="change-cursor">
+            <nb-user [name]="item.Name" [title]="item.Id" (click)="onClick(item.Id)" class="change-cursor">
             </nb-user>
           </nb-list-item>
         </nb-list>

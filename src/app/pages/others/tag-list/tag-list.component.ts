@@ -10,44 +10,32 @@ import { Tag } from '../../../models/more/tag.module';
 })
 export class TagListComponent {
 
-  lists: Tag[];
+  lists: Tag[] = [];
 
   constructor(private router: Router) {
     this.tagListCreator();
   }
 
   tagListCreator() {
+    for (const entry of Setting.dataList) {
 
-    // const temp = Setting.dataList.map(a => a.Tags);
+      if (entry.Tags?.Tag) {
+        for (const item of entry.Tags.Tag) {
 
-    // let newArr = [];
+          this.lists.push(
+            {
+              Id: item.Id,
+              Name: item.Name,
+            });
 
-    // for (let i = 0; i < temp.length; i++) {
-    //   newArr = newArr.concat(temp[i]);
-    // }
-
-    // this.lists = newArr;
-    // console.log(newArr);
-    // for (let entry of Setting.dataList) {
-    //   console.log(entry);
-    //   for (let item of entry.Tags) {
-    //     console.log(item);
-
-    //     if (item) {
-    //       const newT = new Tag();
-    //       newT.Id = item.Id;
-    //       newT.Name = item.Name;
-
-    //       this.lists.push(newT);
-    //       this.lists = this.lists.filter((test, index, array) =>
-    //         index === array.findIndex((findTest) =>
-    //           findTest.Id === test.Id,
-    //         ),
-    //       );
-    //     }
-
-    //   }
-    // }
+          this.lists = this.lists.filter((test, index, array) =>
+            index === array.findIndex((findTest) =>
+              findTest.Id === test.Id,
+            ),
+          );
+        }
+      }
+    }
   }
 
   onClick(id: string) {

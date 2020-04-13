@@ -15,9 +15,6 @@ export class PostListComponent implements OnInit {
   lists: PostData[];
 
   constructor(private router: Router, private route: ActivatedRoute) {
-    this.id = this.router.getCurrentNavigation().extras.state.id;
-
-    this.lists = Setting.dataList.filter(a => a.Id === this.id);
   }
 
   ngOnInit() {

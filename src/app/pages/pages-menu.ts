@@ -8,7 +8,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
-    title: 'دسته ها',
+    title: 'امکانات',
     group: true,
   },
   {
