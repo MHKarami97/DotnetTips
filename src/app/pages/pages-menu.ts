@@ -23,6 +23,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'بر اساس تگ',
         link: '/pages/others/tag-list',
       },
+      {
+        title: 'جستجو',
+        link: '/pages/others/smart-table',
+      },
     ],
   },
 ];

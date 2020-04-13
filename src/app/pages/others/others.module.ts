@@ -8,10 +8,14 @@ import {
   NbPopoverModule,
   NbTableModule,
   NbToastrModule,
+  NbTreeGridModule,
+  NbSpinnerModule,
+  NbTooltipModule,
 } from '@nebular/theme';
 import { NgModule } from '@angular/core';
 import { ThemeModule } from '../../@theme/theme.module';
 import { OthersRoutingModule, routedComponents } from './others-routing.module';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 @NgModule({
   imports: [
@@ -32,6 +36,10 @@ import { OthersRoutingModule, routedComponents } from './others-routing.module';
     NbPopoverModule,
     NbTableModule,
     NbToastrModule,
+    NbTreeGridModule,
+    NbSpinnerModule,
+    Ng2SmartTableModule,
+    NbTooltipModule,
   ],
   declarations: [
     ...routedComponents,

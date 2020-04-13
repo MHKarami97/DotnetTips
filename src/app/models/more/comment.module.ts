@@ -1,9 +1,13 @@
 import { User } from '../../@core/data/users';
 
-export class UserComment {
+export interface UComment {
   Id: string;
-  ReplyToId: number;
+  ReplyToId: string;
   Body: string;
   CreatedOn: string;
   User: User;
+}
+
+export interface UserComment {
+  Comment: UComment[];
 }

@@ -1,13 +1,13 @@
 import { User } from '../user/user.module';
-import { Tag } from '../more/tag.module';
+import { PostTag } from '../more/tag.module';
 import { UserComment } from '../more/comment.module';
 
-export class PostData {
+export interface PostData {
   Id: string;
   Title: string;
   Body: string;
   CreatedOn: string;
-  Tags: Tag[];
+  Tags: PostTag;
   User: User;
-  Comments: UserComment[];
+  Comments: UserComment;
 }

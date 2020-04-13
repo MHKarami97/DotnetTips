@@ -28,7 +28,7 @@ export class PostListComponent implements OnInit {
       this.lists = Setting.dataList.filter(a => a.User.Id === this.id);
 
     } else if (this.witch === '2') {
-      this.lists = Setting.dataList.filter(a => a.Tags.filter(b => b.Id === this.id));
+      this.lists = Setting.dataList.filter(a => a.Tags.Tag.filter(b => b.Id === this.id));
     } else {
       this.lists = Setting.dataList;
     }
