@@ -13,6 +13,7 @@ import {
   NbPopoverModule,
   NbTableModule,
   NbToastrModule,
+  NbSpinnerModule,
 } from '@nebular/theme';
 import { ListComponent } from './list/list.component';
 import { NgModule } from '@angular/core';
@@ -44,6 +45,7 @@ import { TabsComponent } from './tabs/tabs.component';
     NbPopoverModule,
     NbTableModule,
     NbToastrModule,
+    NbSpinnerModule,
   ],
   declarations: [
     MainDashboardComponent,

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NbToastrService, NbGlobalPhysicalPosition } from '@nebular/theme';
 import { PostService } from '../../services/post.service';
 import { PostData } from '../../models/post/post.module';

@@ -10,9 +10,14 @@ import { PostData } from '../../../models/post/post.module';
 export class ListComponent {
 
   @Input() lists: PostData[];
+  loading = true;
 
   constructor(private router: Router) {
     // this.lists = Setting.dataList;
+  }
+
+  finishFanc() {
+    this.loading = false;
   }
 
   onClick(value: string) {

@@ -1,10 +1,11 @@
 <div class="lists row">
   <div class="col-md-12 col-lg-12 col-xxxl-12">
-    <nb-card class="list-card" size="small">
+    <nb-card [nbSpinner]="loading" nbSpinnerStatus="primary" class="list-card" size="small">
       <nb-card-header>مطالب</nb-card-header>
       <nb-card-body>
         <nb-list>
-          <nb-list-item *ngFor="let item of lists">
+          <nb-list-item *ngFor="let item of lists; let last = last">
+            {{last ? finishFanc() : ''}}
             <nb-user [name]="item.Id" [title]="item.Title" (click)="onClick(item.Id)" class="change-cursor">
             </nb-user>
           </nb-list-item>
