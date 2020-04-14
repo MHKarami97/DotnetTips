@@ -1,15 +1,12 @@
-<div class="lists row">
-  <div class="col-md-12 col-lg-12 col-xxxl-12">
-    <nb-card class="list-card" size="small">
-      <nb-card-header>مطالب</nb-card-header>
-      <nb-card-body>
-        <nb-list>
-          <nb-list-item *ngFor="let item of lists">
-            <nb-user [name]="item.Title" [title]="item.Id" (click)="onClick(item.Id)" class="change-cursor">
-            </nb-user>
-          </nb-list-item>
-        </nb-list>
-      </nb-card-body>
-    </nb-card>
-  </div>
-</div>
+<nb-card>
+  <nb-card-header>
+    لیست
+    <input #search type="text" nbInput fieldSize="medium" placeholder="جستجو کلی ..." (keyup)="onSearch(search.value)"
+      style="float: left;">
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="source" (userRowSelect)="onClick($event)" class="change-cursor">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
