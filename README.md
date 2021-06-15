@@ -15,7 +15,7 @@ This project is lightweight and extensible infrastructure for building RESTful W
 - npm start
 
 ## Live version
-<a href="https://mhkarami97.github.io/DotnetTips">https://mhkarami97.github.io/DotnetTips</a>
+<a href="https://mhkarami97.ir/DotnetTips">https://mhkarami97.ir/DotnetTips</a>
 
 ## Images
 <img src="http://uupload.ir/files/5n88_annotation_2020-04-13_153458-min.png"/>
